@@ -1,0 +1,7 @@
+/* Hoja de estilos exclusiva de AdminLogin. */
+/* Regla de estilo: define la presentación visual del selector siguiente. */
+.admin-login-page { min-height: 60vh; display: grid; place-items: center; padding: 2rem 1rem; }
+/* Regla de estilo: define la presentación visual del selector siguiente. */
+.admin-login-card { width: min(100%, 440px); display: grid; gap: .8rem; padding: 2rem; border: 1px solid #343b4b; border-radius: 1rem; }
+/* Regla de estilo: define la presentación visual del selector siguiente. */
+.admin-login-card input { padding: .8rem; border-radius: .4rem; }

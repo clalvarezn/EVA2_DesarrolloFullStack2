@@ -1,0 +1,25 @@
+/* Estilos propios del componente DetalleProducto. */
+/* Regla de estilo: define la presentación visual del selector siguiente. */
+.detail {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 2rem;
+    align-items: center;
+    margin-top: 1.5rem;
+}
+
+/* Regla de estilo: define la presentación visual del selector siguiente. */
+.detail img {
+    display: block;
+    width: 100%;
+    max-height: 520px;
+    object-fit: contain;
+    border-radius: 1rem;
+}
+
+/* Regla de estilo: define la presentación visual del selector siguiente. */
+@media (max-width: 700px) {
+    .detail {
+        grid-template-columns: 1fr;
+    }
+}

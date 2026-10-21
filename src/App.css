@@ -1,0 +1,607 @@
+/* Regla de estilo: define la presentación visual del selector siguiente. */
+.container {
+    width: min(1120px, 92%);
+    margin-inline: auto
+}
+
+/* Regla de estilo: define la presentación visual del selector siguiente. */
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    background: rgba(12, 15, 21, .96);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid #252b36
+}
+
+/* Regla de estilo: define la presentación visual del selector siguiente. */
+.nav-container {
+    min-height: 76px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px
+}
+
+/* Regla de estilo: define la presentación visual del selector siguiente. */
+.logo {
+    font-size: 1.35rem;
+    font-weight: 900;
+    letter-spacing: 1px;
+    white-space: nowrap
+}
+
+.logo span,
+/* Regla de estilo: define la presentación visual del selector siguiente. */
+.hero-content h1 span {
+    color: #35ed11
+}
+
+/* Regla de estilo: define la presentación visual del selector siguiente. */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 20px
+}
+
+/* Regla de estilo: define la presentación visual del selector siguiente. */
+.nav-links a {
+    font-size: .93rem;
+    color: #e3e7ec;
+    transition: color .2s
+}
+
+.nav-links a:hover,
+/* Regla de estilo: define la presentación visual del selector siguiente. */
+.section-heading>a:hover {
+    color: #35ed11
+}
+
+/* Regla de estilo: define la presentación visual del selector siguiente. */
+.nav-cart {
+    border: 1px solid #35ed11;
+    border-radius: 8px;
+    padding: 8px 12px
+}
+
+/* Regla de estilo: define la presentación visual del selector siguiente. */
+.nav-cart b {
+    color: #35ed11
+}
+
+/* Regla de estilo: define la presentación visual del selector siguiente. */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: 1px solid #424a55;
+    color: white;
+    border-radius: 8px;
+    padding: 5px 10px;
+    font-size: 1.3rem
+}
+
+/* Regla de estilo: define la presentación visual del selector siguiente. */
+.hero-banner {
+    min-height: 460px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 36px;
+    padding: 52px max(4%, calc((100% - 1120px)/2));
+    background: radial-gradient(circle at 80% 50%, #243b0f 0%, #0b0d12 60%);
+    overflow: hidden
+}
+
+/* Regla de estilo: define la presentación visual del selector siguiente. */
+.hero-content {
+    width: 100%;
+    max-width: 560px
+}
+
+/* Regla de estilo: define la presentación visual del selector siguiente. */
+.eyebrow {
+    color: #35ed11;
+    font-size: .78rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 10px
+}
+
+/* Regla de estilo: define la presentación visual del selector siguiente. */
+.hero-content>p:not(.eyebrow) {
+    font-size: 1.1rem;
+    max-width: 520px
+}
+
+/* Regla de estilo: define la presentación visual del selector siguiente. */
+.hero-art img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 18px;
+    border: 1px solid #35402e;
+    box-shadow: 0 20px 70px #0008
+}
+
+.btn,
+/* Regla de estilo: define la presentación visual del selector siguiente. */
+.btn-small {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    background: #35ed11;
+    color: #0a0d0b;
+    border: 1px solid #35ed11;
+    border-radius: 8px;
+    padding: 11px 18px;
+    font-weight: 800;
+    transition: transform .2s, filter .2s
+}
+
+/* Regla de estilo: define la presentación visual del selector siguiente. */
+.btn {
+    margin-top: 12px
+}
+
+/* Regla de estilo: define la presentación visual del selector siguiente. */
+.btn-small {
+    font-size: .85rem;
+    padding: 9px 12px
+}
+
+.btn:hover,
+/* Regla de estilo: define la presentación visual del selector siguiente. */
+.btn-small:hover {
+    filter: brightness(.9);
+    transform: translateY(-1px)
+}
+
+/* Regla de estilo: define la presentación visual del selector siguiente. */
+.btn-outline {
+    background: transparent;
+    color: #35ed11
+}
+
+/* Regla de estilo: define la presentación visual del selector siguiente. */
+.btn-secondary {
+    background: transparent;
+    color: #f4f4f4;
+    border-color: #59616c;
+    margin-left: 8px
+}
+
+/* Regla de estilo: define la presentación visual del selector siguiente. */
+.section {
+    padding-top: 58px;
+    padding-bottom: 64px
+}
+
+/* Regla de estilo: define la presentación visual del selector siguiente. */
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 16px
+}
+
+/* Regla de estilo: define la presentación visual del selector siguiente. */
+.section-heading h2 {
+    margin-bottom: 0
+}
+
+/* Regla de estilo: define la presentación visual del selector siguiente. */
+.section-heading>a {
+    color: #35ed11
+}
+
+/* Regla de estilo: define la presentación visual del selector siguiente. */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(235px, 1fr));
+    gap: 22px;
+    margin-top: 25px
+}
+
+/* Regla de estilo: define la presentación visual del selector siguiente. */
+.brands {
+    background: #11151d;
+    padding: 35px 0;
+    text-align: center;
+    border-block: 1px solid #252b36
+}
+
+/* Regla de estilo: define la presentación visual del selector siguiente. */
+.brand-list {
+    display: flex;
+    justify-content: center;
+    gap: clamp(20px, 5vw, 55px);
+    flex-wrap: wrap;
+    font-weight: 900;
+    color: #b9c0ca;
+    margin-top: 18px
+}
+
+/* Regla de estilo: define la presentación visual del selector siguiente. */
+.site-footer {
+    background: #0b0d12d9;
+    border-top: 1px solid #252b36;
+    padding: 30px 0
+}
+
+/* Regla de estilo: define la presentación visual del selector siguiente. */
+.footer-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap
+}
+
+.footer-inner p,
+/* Regla de estilo: define la presentación visual del selector siguiente. */
+.footer-inner small {
+    margin: 0;
+    color: #9ca3af
+}
+
+/* Regla de estilo: define la presentación visual del selector siguiente. */
+.form-section {
+    padding: 60px 0 80px;
+    display: flex;
+    justify-content: center
+}
+
+.form-card,
+/* Regla de estilo: define la presentación visual del selector siguiente. */
+.about-card {
+    background: #151a22;
+    border: 1px solid #292f39;
+    border-radius: 14px;
+    padding: clamp(22px, 4vw, 36px);
+    color: white
+}
+
+/* Regla de estilo: define la presentación visual del selector siguiente. */
+.form-card {
+    width: min(540px, 100%)
+}
+
+/* Regla de estilo: define la presentación visual del selector siguiente. */
+.form-card h1 {
+    font-size: 2.3rem
+}
+
+/* Regla de estilo: define la presentación visual del selector siguiente. */
+.form-card label {
+    display: block;
+    margin: 16px 0 0;
+    color: #e5e7eb;
+    font-weight: 600
+}
+
+.form-card input,
+.form-card textarea,
+/* Regla de estilo: define la presentación visual del selector siguiente. */
+.search-input {
+    display: block;
+    width: 100%;
+    margin-top: 6px;
+    border: 1px solid #3a424f;
+    background: #0d1118;
+    color: #fff;
+    border-radius: 8px;
+    padding: 12px;
+    outline: none
+}
+
+.form-card input:focus,
+.form-card textarea:focus,
+/* Regla de estilo: define la presentación visual del selector siguiente. */
+.search-input:focus {
+    border-color: #35ed11;
+    box-shadow: 0 0 0 2px #35ed1122
+}
+
+/* Regla de estilo: define la presentación visual del selector siguiente. */
+.form-card .btn {
+    width: 100%;
+    margin-top: 22px
+}
+
+/* Regla de estilo: define la presentación visual del selector siguiente. */
+.form-message {
+    margin: 16px 0 0;
+    padding: 10px;
+    border-radius: 8px
+}
+
+/* Regla de estilo: define la presentación visual del selector siguiente. */
+.success {
+    background: #14351a;
+    color: #a5ff9a
+}
+
+/* Regla de estilo: define la presentación visual del selector siguiente. */
+.error {
+    background: #421e24;
+    color: #ffb8bf
+}
+
+/* Regla de estilo: define la presentación visual del selector siguiente. */
+.form-note {
+    font-size: .9rem;
+    margin-top: 16px
+}
+
+/* Regla de estilo: define la presentación visual del selector siguiente. */
+.form-note a {
+    color: #35ed11
+}
+
+/* Regla de estilo: define la presentación visual del selector siguiente. */
+.search-input {
+    max-width: 450px;
+    margin: 24px 0
+}
+
+/* Regla de estilo: define la presentación visual del selector siguiente. */
+.empty-state {
+    text-align: center;
+    padding: 55px 20px;
+    background: #151a22;
+    border: 1px solid #292f39;
+    border-radius: 14px
+}
+
+/* Regla de estilo: define la presentación visual del selector siguiente. */
+.cart-list {
+    margin-top: 28px
+}
+
+/* Regla de estilo: define la presentación visual del selector siguiente. */
+.cart-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: space-between;
+    padding: 20px 0;
+    border-bottom: 1px solid #303743
+}
+
+/* Regla de estilo: define la presentación visual del selector siguiente. */
+.cart-item h3 {
+    margin: 0;
+    color: #fff
+}
+
+/* Regla de estilo: define la presentación visual del selector siguiente. */
+.cart-item p {
+    margin: 4px 0 0
+}
+
+/* Regla de estilo: define la presentación visual del selector siguiente. */
+.cart-item>strong {
+    white-space: nowrap
+}
+
+/* Regla de estilo: define la presentación visual del selector siguiente. */
+.quantity {
+    display: flex;
+    align-items: center;
+    gap: 12px
+}
+
+/* Regla de estilo: define la presentación visual del selector siguiente. */
+.quantity button {
+    background: #252b36;
+    color: #fff;
+    border: 1px solid #414a57;
+    border-radius: 6px;
+    width: 32px;
+    height: 32px
+}
+
+/* Regla de estilo: define la presentación visual del selector siguiente. */
+.remove-btn {
+    border: 0;
+    background: none;
+    color: #ff8c8c
+}
+
+/* Regla de estilo: define la presentación visual del selector siguiente. */
+.cart-summary {
+    text-align: right;
+    margin-top: 25px
+}
+
+/* Regla de estilo: define la presentación visual del selector siguiente. */
+.cart-summary h2 {
+    font-size: 1.5rem
+}
+
+/* Regla de estilo: define la presentación visual del selector siguiente. */
+.detail {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 40px;
+    align-items: center;
+    margin-top: 24px
+}
+
+/* Regla de estilo: define la presentación visual del selector siguiente. */
+.detail>img {
+    width: 100%;
+    max-height: 440px;
+    object-fit: contain;
+    background: #fff;
+    border-radius: 14px;
+    padding: 24px
+}
+
+/* Regla de estilo: define la presentación visual del selector siguiente. */
+.detail h2 {
+    color: #35ed11
+}
+
+.blog-grid,
+/* Regla de estilo: define la presentación visual del selector siguiente. */
+.admin-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 22px;
+    margin-top: 25px
+}
+
+/* Regla de estilo: define la presentación visual del selector siguiente. */
+.blog-grid .about-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start
+}
+
+/* Regla de estilo: define la presentación visual del selector siguiente. */
+.blog-grid .btn-small {
+    margin-top: auto
+}
+
+/* Regla de estilo: define la presentación visual del selector siguiente. */
+.article {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 32px;
+    background: #151a22;
+    border: 1px solid #292f39;
+    border-radius: 14px
+}
+
+/* Regla de estilo: define la presentación visual del selector siguiente. */
+.article p {
+    font-size: 1.08rem
+}
+
+/* Regla de estilo: define la presentación visual del selector siguiente. */
+.admin-grid a:hover {
+    border-color: #35ed11
+}
+
+/* Regla de estilo: define la presentación visual del selector siguiente. */
+.lead {
+    font-size: 1.1rem
+}
+
+/* Regla de estilo: define la presentación visual del selector siguiente. */
+@media(max-width:850px) {
+/* Regla de estilo: define la presentación visual del selector siguiente. */
+    .menu-toggle {
+        display: block
+    }
+
+/* Regla de estilo: define la presentación visual del selector siguiente. */
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 75px;
+        left: 0;
+        right: 0;
+        padding: 18px 4%;
+        background: #0d1118;
+        border-bottom: 1px solid #303743;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 14px
+    }
+
+/* Regla de estilo: define la presentación visual del selector siguiente. */
+    .nav-links.abierto {
+        display: flex
+    }
+
+/* Regla de estilo: define la presentación visual del selector siguiente. */
+    .nav-links a {
+        padding: 6px 0
+    }
+
+/* Regla de estilo: define la presentación visual del selector siguiente. */
+    .hero-banner {
+        grid-template-columns: 1fr;
+        padding: 48px 4%;
+        gap: 26px
+    }
+
+/* Regla de estilo: define la presentación visual del selector siguiente. */
+    .hero-art img {
+        height: 250px
+    }
+
+/* Regla de estilo: define la presentación visual del selector siguiente. */
+    .detail {
+        grid-template-columns: 1fr
+    }
+
+/* Regla de estilo: define la presentación visual del selector siguiente. */
+    .detail>img {
+        max-height: 320px
+    }
+
+/* Regla de estilo: define la presentación visual del selector siguiente. */
+    .cart-item {
+        flex-wrap: wrap
+    }
+
+/* Regla de estilo: define la presentación visual del selector siguiente. */
+    .cart-item>div:first-child {
+        flex: 1 1 55%
+    }
+}
+
+/* Regla de estilo: define la presentación visual del selector siguiente. */
+@media(max-width:520px) {
+/* Regla de estilo: define la presentación visual del selector siguiente. */
+    .section {
+        padding-top: 40px;
+        padding-bottom: 45px
+    }
+
+/* Regla de estilo: define la presentación visual del selector siguiente. */
+    .section-heading {
+        align-items: start;
+        flex-direction: column
+    }
+
+/* Regla de estilo: define la presentación visual del selector siguiente. */
+    .footer-inner {
+        flex-direction: column;
+        align-items: flex-start
+    }
+
+/* Regla de estilo: define la presentación visual del selector siguiente. */
+    .brand-list {
+        gap: 18px
+    }
+
+/* Regla de estilo: define la presentación visual del selector siguiente. */
+    .cart-item {
+        gap: 12px
+    }
+
+/* Regla de estilo: define la presentación visual del selector siguiente. */
+    .cart-summary {
+        text-align: left
+    }
+
+/* Regla de estilo: define la presentación visual del selector siguiente. */
+    .btn-secondary {
+        margin: 10px 0 0
+    }
+
+/* Regla de estilo: define la presentación visual del selector siguiente. */
+    .hero-art img {
+        height: 200px
+    }
+}
+
+
+/* Estilos específicos del componente raíz y sus contenedores de página. */
+/* Regla de estilo: define la presentación visual del selector siguiente. */
+.app-page { min-height: 60vh; }

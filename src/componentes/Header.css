@@ -1,0 +1,7 @@
+/* Estilos propios del componente Header. */
+/* Regla de estilo: define la presentación visual del selector siguiente. */
+.site-header { position: relative; z-index: 2; }
+/* Regla de estilo: define la presentación visual del selector siguiente. */
+.site-header a { text-decoration: none; }
+/* Regla de estilo: define la presentación visual del selector siguiente. */
+.site-header nav { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem; }

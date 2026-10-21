@@ -1,0 +1,151 @@
+/** Explicación general: Página de inicio con carrusel de promociones y selección de productos destacados. */
+import { useEffect, useState } from 'react'
+import './Inicio.css'
+import Producto from './Producto'
+import { productos } from '../data/productos'
+
+// Datos de las diapositivas: cada objeto guarda la ruta de imagen y su texto alternativo.
+const imagenesCarrusel = [
+  {
+    src: '/imagenes/Imagen1.jpg',
+    alt: 'Setups RGB: ilumina tu espacio de juego',
+  },
+  {
+    src: '/imagenes/Imagen2.jpg',
+    alt: 'Oferta especial: tarjetas gráficas de última generación',
+  },
+  {
+    src: '/imagenes/Imagen3.jpg',
+    alt: 'LevelUp Gaming: sube de nivel tu experiencia gamer',
+  },
+]
+
+// Página de inicio; recibe agregar como prop para enviar productos al carrito.
+export default function Inicio({ agregar }) {
+  // Guarda el índice de la diapositiva que se está mostrando.
+  const [indiceActual, setIndiceActual] = useState(0)
+
+  // Cambiar de imagen automáticamente cada 5 segundos
+  // Inicia el cambio automático de diapositivas y limpia el intervalo al desmontar el componente.
+  useEffect(() => {
+    const intervalo = setInterval(() => {
+      setIndiceActual(indice => (indice + 1) % imagenesCarrusel.length)
+    }, 5000)
+
+    return () => clearInterval(intervalo)
+  }, [])
+
+  // Retrocede una diapositiva y vuelve al final si estaba en la primera.
+  const anterior = () => {
+    setIndiceActual(indice =>
+      (indice - 1 + imagenesCarrusel.length) % imagenesCarrusel.length
+    )
+  }
+
+  // Avanza una diapositiva y vuelve al inicio al llegar a la última.
+  const siguiente = () => {
+    setIndiceActual(indice =>
+      (indice + 1) % imagenesCarrusel.length
+    )
+  }
+
+  return (
+    <>
+      {/* Carrusel principal: muestra las promociones y controles de navegación. */}
+      <section className="hero-carrusel" aria-label="Promociones destacadas">
+        <div className="carrusel-contenedor">
+          {/* map crea un enlace por cada diapositiva usando su URL como clave estable. */}
+          {imagenesCarrusel.map((imagen, indice) => (
+            <a
+              key={imagen.src}
+              href="/productos"
+              className={`carrusel-slide ${
+                indice === indiceActual ? 'activo' : ''
+              }`}
+              aria-hidden={indice !== indiceActual}
+              tabIndex={indice === indiceActual ? 0 : -1}
+            >
+              <img src={imagen.src} alt={imagen.alt} />
+            </a>
+          ))}
+
+          {/* Los botones permiten cambiar manualmente de diapositiva. */}
+          <button
+            type="button"
+            className="carrusel-flecha carrusel-anterior"
+            onClick={anterior}
+            aria-label="Imagen anterior"
+          >
+            &#10094;
+          </button>
+
+          <button
+            type="button"
+            className="carrusel-flecha carrusel-siguiente"
+            onClick={siguiente}
+            aria-label="Imagen siguiente"
+          >
+            &#10095;
+          </button>
+
+          <div className="carrusel-indicadores">
+            {imagenesCarrusel.map((imagen, indice) => (
+              <button
+                key={imagen.src}
+                type="button"
+                className={`carrusel-indicador ${
+                  indice === indiceActual ? 'activo' : ''
+                }`}
+                onClick={() => setIndiceActual(indice)}
+                aria-label={`Mostrar imagen ${indice + 1}`}
+                aria-current={indice === indiceActual ? 'true' : undefined}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Productos destacados: muestra solo los primeros tres productos del catálogo. */}
+      {/* Accesos rápidos a las categorías del catálogo. */}
+      <section className="container section">
+        <div className="section-heading">
+            <h2>⚡ Ofertas relámpago</h2>
+        </div>
+
+        <div className="product-grid">
+          {productos.slice(0, 3).map(producto => (
+            <Producto
+              key={producto.id}
+              producto={producto}
+              onAgregar={agregar}
+            />
+          ))}
+        </div>
+      </section>
+
+      {/* Lista visual de marcas asociadas a la tienda. */}
+      <section className="brands">
+        <div className="container">
+          <h2>Marcas asociadas</h2>
+          <div className="brand-list">
+            <span>LOGITECH</span>
+            <span>ASUS</span>
+            <span>AMD</span>
+            <span>NVIDIA</span>
+            <span>MSI</span>
+          </div>
+        </div>
+      </section>
+
+      <section className="container section">
+        <h2>Categorías</h2>
+        <div className="category-grid">
+          <a href="/productos">🎧 Periféricos</a> 
+          <a href="/productos">🖥️ Hardware PC</a>
+          <a href="/productos">🪑 Sillas Gamer</a>
+          <a href="/productos">🎮 Accesorios</a>
+        </div>
+      </section>
+    </>
+  )
+}

@@ -1,0 +1,9 @@
+/* Estilos propios del componente Formulario. */
+/* Regla de estilo: define la presentación visual del selector siguiente. */
+.formulario-page { max-width: 680px; margin: 0 auto; }
+/* Regla de estilo: define la presentación visual del selector siguiente. */
+.formulario-page form { display: grid; gap: .8rem; }
+/* Regla de estilo: define la presentación visual del selector siguiente. */
+.formulario-page input, .formulario-page textarea { width: 100%; padding: .8rem; border: 1px solid #465066; border-radius: .5rem; }
+/* Regla de estilo: define la presentación visual del selector siguiente. */
+.formulario-mensaje { margin-top: 1rem; padding: .8rem; border-radius: .5rem; }

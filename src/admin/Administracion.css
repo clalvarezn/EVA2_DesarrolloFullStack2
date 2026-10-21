@@ -1,0 +1,9 @@
+/* Hoja de estilos exclusiva de Administracion. */
+/* Regla de estilo: define la presentación visual del selector siguiente. */
+.admin-layout { min-height: 70vh; }
+/* Regla de estilo: define la presentación visual del selector siguiente. */
+.admin-main { padding: 2rem; }
+/* Regla de estilo: define la presentación visual del selector siguiente. */
+.admin-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 1rem; }
+/* Regla de estilo: define la presentación visual del selector siguiente. */
+.admin-stats article { padding: 1rem; border: 1px solid #343b4b; border-radius: .75rem; }
