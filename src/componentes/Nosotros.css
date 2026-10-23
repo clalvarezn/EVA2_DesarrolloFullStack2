@@ -1,0 +1,8 @@
+/* Estilos propios del componente Nosotros. */
+/* Regla de estilo: define la presentación visual del selector siguiente. */
+.about-card { 
+    margin: 1rem 0;
+    padding: 1.5rem;
+    border: 1px solid #343b4b;
+    border-radius: .9rem;
+     }
