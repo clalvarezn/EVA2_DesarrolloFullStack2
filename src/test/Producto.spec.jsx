@@ -4,6 +4,8 @@ import {render, screen, fireEvent, cleanup} from '@testing-library/react';
 import Producto from '../componentes/Producto';
 
 describe('Componente Producto', () => {
+  const producto = { id: 1, nombre: 'Producto de prueba', descripcion: 'Descripción de prueba', precio: 10000, imagen: '/imagen.jpg' };
+
   // Limpia el DOM después de cada caso
   afterEach(() => cleanup());
 
@@ -16,8 +18,6 @@ describe('Componente Producto', () => {
       />
     );
     
-    const producto = { id: 1, nombre: 'Producto de prueba', descripcion: 'Descripción de prueba', precio: 10000, imagen: '/imagen.jpg' };
-
     expect(screen.getByRole('heading', { name: 'Producto de prueba' })).toBeTruthy();
     expect(screen.getByText('Descripción de prueba')).toBeTruthy();
     expect(screen.getByRole('link', { name: 'Ver producto' })).toBeTruthy();
@@ -26,14 +26,14 @@ describe('Componente Producto', () => {
 
   /* Caso de prueba 2 verifica un comportamiento concreto del componente. */
   it('llama a onAgregar cuando se presiona añadir al carrito', () => {
+    const agregar = jasmine.createSpy('agregar');
+
     render(
       <Producto 
       producto={producto} 
       onAgregar={agregar} 
       />
     );
-
-    const agregar = jasmine.createSpy('agregar');
 
     fireEvent.click(screen.getByRole('button', { name: 'Añadir al carrito' }));
     expect(agregar).toHaveBeenCalledWith(producto);
