@@ -36,6 +36,10 @@ npm run dev
 npm test
 ```
 
-Se necesita Google Chrome o Chromium instalado para que Karma pueda iniciar `ChromeHeadlessNoSandbox`. Las pruebas están escritas con el patrón `describe` / `it` / `render` / `screen` / `expect`, y cada archivo limpia el DOM con `afterEach(() => cleanup())`.
+### Ver el informe de pruebas
 
-La documentación detallada y comentada se encuentra en `GUIA_CODIGO_COMENTADO_Y_TESTS.md`.
+```bash
+Start-Process .\coverage\html\index.html
+```
+
+Se necesita Google Chrome o Chromium instalado para que Karma pueda iniciar `ChromeHeadlessNoSandbox`. Las pruebas están escritas con el patrón `describe` / `it` / `render` / `screen` / `expect`, y cada archivo limpia el DOM con `afterEach(() => cleanup())`.
