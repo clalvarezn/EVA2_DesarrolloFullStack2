@@ -1,1 +1,51 @@
+/* Estilos propios del componente Carrito. */
+/* Regla de estilo: define la presentación visual del selector siguiente. */
+.cart-list {
+    display: grid;
+    gap: 1rem;
+}
 
+/* Regla de estilo: define la presentación visual del selector siguiente. */
+.cart-item {
+    display: grid;
+    grid-template-columns: 1fr auto auto auto;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    border: 1px solid #343b4b;
+    border-radius: .8rem;
+}
+
+/* Regla de estilo: define la presentación visual del selector siguiente. */
+.quantity {
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+}
+
+/* Regla de estilo: define la presentación visual del selector siguiente. */
+.quantity button,
+.remove-btn {
+    cursor: pointer;
+}
+
+/* Regla de estilo: define la presentación visual del selector siguiente. */
+.cart-summary {
+    margin-top: 1.5rem;
+    text-align: right;
+}
+
+/* Regla de estilo: define la presentación visual del selector siguiente. */
+.empty-state {
+    padding: 2rem;
+    text-align: center;
+    border: 1px dashed #596174;
+    border-radius: 1rem;
+}
+
+/* Regla de estilo: define la presentación visual del selector siguiente. */
+@media (max-width: 700px) {
+    .cart-item {
+        grid-template-columns: 1fr 1fr;
+    }
+}
